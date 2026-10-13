@@ -1,0 +1,52 @@
+.panel {
+  margin-top: 24px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-width: 560px;
+}
+
+.consent {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 0.95rem;
+}
+
+.consent input {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.status {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 20px 0 4px;
+}
+
+.status[data-status='in-call'] {
+  color: var(--ok);
+}
+
+.status[data-status='error'] {
+  color: var(--danger);
+}
+
+.timer {
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+
+.detail {
+  margin: 4px 0 0;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}

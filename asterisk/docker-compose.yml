@@ -1,0 +1,11 @@
+services:
+  asterisk:
+    build: .
+    image: preconsulta-asterisk:20.18.1
+    restart: unless-stopped
+    # Red del host: el audio RTP usa un rango de puertos UDP y con NAT de Docker
+    # sería mucho más frágil.
+    network_mode: host
+    env_file: .env
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
